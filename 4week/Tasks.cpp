@@ -44,6 +44,13 @@ int main() {
 		cout << P1[l] << " ";
 	}
 	cout << endl;
+	int counter = 0;
+	
+	for (int i = 0; i < sizeOF; i++) {
+		if (P1[i] % 2 != 0)
+			counter++;
+	}
 
+	cout << counter;
 	return 0;
 }
