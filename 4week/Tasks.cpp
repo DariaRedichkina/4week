@@ -17,6 +17,7 @@ int main() {
 	for (int l = 0; l < 15; l++) {
 		cout << P1[l] << " ";
 	}
+	cout << endl;
 	/*
 	for (int k = 0; k < 15; k++) {
 		int r = k + rand() % (15 - k); 
@@ -31,6 +32,18 @@ int main() {
 	for (int l = 0; l < 15; l++) {
 		cout << P1[l] << " ";
 	}
+	cout << endl;
+
+	sort(P1.begin(), P1.end());
+	vector <int>::iterator it;
+	it = unique(P1.begin(), P1.end());
+	P1.resize(distance(P1.begin(), it));
+
+	int sizeOF = P1.size();
+	for (int l = 0; l < sizeOF; l++) {
+		cout << P1[l] << " ";
+	}
+	cout << endl;
 
 	return 0;
 }
