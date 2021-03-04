@@ -143,5 +143,19 @@ int main() {
 	}
 	cout << endl;
 
+	for (int i = 0; i < sizeOF; i++) {
+		if (P3[i] == 0) {
+			P3.erase(P3.begin() + i);
+			sizeOF--;
+			i--;
+		}
+	}
+	sizeOF = P3.size();
+	cout << "sequence without 0: ";
+	for (int i = 0; i < sizeOF; i++) {
+		cout << P3[i] << " ";
+	}
+	cout << endl;
+
 	return 0;
 }
