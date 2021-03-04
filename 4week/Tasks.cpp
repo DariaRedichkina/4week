@@ -133,5 +133,15 @@ int main() {
 	}
 	cout << endl;
 
+	for (int i = 0; i < sizeOF; i++) {
+		if (P3[i] < 0)
+			P3[i] = 0;
+	}
+	cout << "sequence without negative elements: ";
+	for (int i = 0; i < sizeOF; i++) {
+		cout << P3[i] << " ";
+	}
+	cout << endl;
+
 	return 0;
 }
