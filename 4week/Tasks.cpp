@@ -193,5 +193,19 @@ int main() {
 	}
 	cout << endl;
 
+	int S4 = N * 2;
+	vector <int> P4(S4);
+	for (int i = 0; i < N; i++) {
+		P4[i] = P1[i];
+	}
+	for (int i = N; i < S4; i++) {
+		P4[i] = P2[i-N];
+	}
+	cout << "sequence P4 composed of P1 and P2: ";
+	for (int i = 0; i < S4; i++) {
+		cout << P4[i] << " ";
+	}
+	cout << endl;
+
 	return 0;
 }
