@@ -165,11 +165,24 @@ int main() {
 	cout << endl;
 
 	sort(P3.begin(), P3.end());
-	it = unique(P3.begin(), P3.end());
-	P3.resize(distance(P3.begin(), it));
 	cout << "top 3 largest elements of the P3 sequence: ";
 	for (int i = sizeOF-3; i < sizeOF; i++) {
 		cout << P3[i] << " ";
+	}
+	cout << endl;
+
+	//сортировка P1
+	sort(P1.begin(), P1.end());
+	cout << "sorted sequence P1: ";
+	for (int i = 0; i < N; i++) {
+		cout << P1[i] << " ";
+	}
+	cout << endl;
+	//сортировка P2
+	sort(P2.begin(), P2.end());
+	cout << "sorted sequence P2: ";
+	for (int i = 0; i < N; i++) {
+		cout << P2[i] << " ";
 	}
 	cout << endl;
 
