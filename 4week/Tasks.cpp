@@ -88,10 +88,22 @@ int main() {
 
 	cout << "prime numbers: ";
 	for (int i = 0; i < sizeOF; i++) {
-		
+
 		if (is_prime(P1[i]))
 			cout << P1[i] << " ";
 	}
+	cout << endl;
+
+	int N = sizeOF;
+	vector <int> P2(N);
+	for (int i = 0; i < N; i++){
+		P2[i] = rand() / 1000;
+	}
+	cout << "new sequence: ";
+	for (int i = 0; i < sizeOF; i++) {
+		cout << P2[i] << " ";
+	}
+	cout << endl;
 
 	return 0;
 }
