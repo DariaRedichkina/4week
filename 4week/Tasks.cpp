@@ -14,6 +14,7 @@ int main() {
 		cin >> P1[j+10];
 	}
 
+	cout << "sequence before any changes: ";
 	for (int l = 0; l < 15; l++) {
 		cout << P1[l] << " ";
 	}
@@ -29,6 +30,7 @@ int main() {
 
 	shuffle(P1.begin(), P1.end(), g);
 	
+	cout << "sequence after mixing: ";
 	for (int l = 0; l < 15; l++) {
 		cout << P1[l] << " ";
 	}
@@ -39,18 +41,32 @@ int main() {
 	it = unique(P1.begin(), P1.end());
 	P1.resize(distance(P1.begin(), it));
 
+	cout << "sequence after deleting duplicate items: ";
 	int sizeOF = P1.size();
 	for (int l = 0; l < sizeOF; l++) {
 		cout << P1[l] << " ";
 	}
 	cout << endl;
-	int counter = 0;
-	
+
+	int counter = 0; //создан счётчик нечётных чисел
 	for (int i = 0; i < sizeOF; i++) {
 		if (P1[i] % 2 != 0)
 			counter++;
 	}
+	cout << "number of odd elements: " << counter << endl;
 
-	cout << counter;
+	int s = 0; //создан элемент для сравнения его со всеми элементами вектора
+	for (int i = 0; i < sizeOF; i++) {
+		if (P1[i] > s)
+			s = P1[i];
+	}
+	cout << "MAX: " << s << endl;
+
+	for (int i = 0; i < sizeOF; i++) {
+		if (P1[i] < s)
+			s = P1[i];
+	}
+	cout << "min: " << s << endl;
+
 	return 0;
 }
