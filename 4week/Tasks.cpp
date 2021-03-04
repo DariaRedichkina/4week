@@ -2,7 +2,25 @@
 #include <vector>
 #include <algorithm>
 #include <random>
+
 using namespace std;
+
+bool is_prime(int n)
+{
+	int i, count = 0;
+	if (n == 1)
+		return false;
+	if (n == 2)
+		return true;
+	if (n % 2 == 0)
+		return false;
+	for (i = 1; i <= n; i++)
+		if (n % i == 0) count++;
+	if (count == 2)   
+		return true;
+	else
+		return false;
+}
 
 int main() {
 	vector <int> P1(15);
@@ -67,6 +85,13 @@ int main() {
 			s = P1[i];
 	}
 	cout << "min: " << s << endl;
+
+	cout << "prime numbers: ";
+	for (int i = 0; i < sizeOF; i++) {
+		
+		if (is_prime(P1[i]))
+			cout << P1[i] << " ";
+	}
 
 	return 0;
 }
