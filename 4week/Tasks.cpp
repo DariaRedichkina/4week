@@ -157,5 +157,12 @@ int main() {
 	}
 	cout << endl;
 
+	reverse(P3.begin(), P3.end());
+	cout << "reversed sequence P3: ";
+	for (int i = 0; i < sizeOF; i++) {
+		cout << P3[i] << " ";
+	}
+	cout << endl;
+
 	return 0;
 }
