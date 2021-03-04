@@ -105,5 +105,11 @@ int main() {
 	}
 	cout << endl;
 
+	int sum = 0;
+	for (int i = 0; i < sizeOF; i++) {
+		sum = sum + P2[i];
+	}
+	cout << "sequence P2 sum: " << sum << endl;
+
 	return 0;
 }
