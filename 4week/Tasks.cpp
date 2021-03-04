@@ -164,5 +164,14 @@ int main() {
 	}
 	cout << endl;
 
+	sort(P3.begin(), P3.end());
+	it = unique(P3.begin(), P3.end());
+	P3.resize(distance(P3.begin(), it));
+	cout << "top 3 largest elements of the P3 sequence: ";
+	for (int i = sizeOF-3; i < sizeOF; i++) {
+		cout << P3[i] << " ";
+	}
+	cout << endl;
+
 	return 0;
 }
