@@ -123,5 +123,15 @@ int main() {
 	}
 	cout << endl;
 
+	vector <int> P3(N);
+	for (int i = 0; i < N; i++) {
+		P3[i] = P1[i] - P2[i];
+	}
+	cout << "sequence P3 obtained by subtracting P2 from P1: ";
+	for (int i = 0; i < sizeOF; i++) {
+		cout << P3[i] << " ";
+	}
+	cout << endl;
+
 	return 0;
 }
