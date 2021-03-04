@@ -111,5 +111,17 @@ int main() {
 	}
 	cout << "sequence P2 sum: " << sum << endl;
 
+	cout << "enter a number that does not exceed " << N << ":  ";
+	int n = 0;
+	cin >> n;
+	for (int i = 0; i < n; i++) {
+		P2[i] = 1;
+	}
+	cout << endl << "sequence after replacing some of the first elements with 1: ";
+	for (int i = 0; i < sizeOF; i++) {
+		cout << P2[i] << " ";
+	}
+	cout << endl;
+
 	return 0;
 }
